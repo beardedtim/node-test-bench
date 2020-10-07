@@ -1,0 +1,19 @@
+{
+  "name": "TestBench",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:beardedtim/node-test-bench.git",
+  "author": "Tim Roberts <timiroberts@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start::default": "node ./src/default/index.js",
+    "start::cluster-default": "node ./src/cluster-default/index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "getenv": "^1.0.0",
+    "helmet": "^4.1.1"
+  }
+}
