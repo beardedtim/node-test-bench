@@ -1,19 +1,20 @@
 const cluster = require('cluster')
 const os = require('os')
+const express = require('express')
+const bodyParser = require('body-parser')
+const cors = require('cors')
+const helmet = require('helmet')
+const morgan = require('morgan')
+const env = require('getenv')
 
-const numCPUs = os.cpus()
+const numCPUs = os.cpus().length
 
 if (cluster.isMaster) {
     for (let i = 0; i < numCPUs; i++) {
         cluster.fork();
     }
 } else {
-    const express = require('express')
-    const bodyParser = require('body-parser')
-    const cors = require('cors')
-    const helmet = require('helmet')
-    const morgan = require('morgan')
-    const env = require('getenv')
+    
 
     const app = express()
 

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# ab  -c 1000 \
+#     -n 10000 \
+#     http://ec2-18-232-179-170.compute-1.amazonaws.com:5050/
+
+docker run --rm jordi/ab \
+    -c 1000 \
+    -n 10000 \
+    http://ec2-18-232-179-170.compute-1.amazonaws.com:5050/
