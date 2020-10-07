@@ -11,7 +11,7 @@ app
     .use(bodyParser.json())
     .use(cors())
     .use(helmet())
-    .use(morgan('combined'))
+    // .use(morgan('combined'))
 
 app.get('/', (req, res) => {
     res.status(200).json({
